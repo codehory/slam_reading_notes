@@ -1,9 +1,12 @@
-<mxfile host="app.diagrams.net" modified="2024-01-15T13:16:29.119Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="FEpe3Def-x97UfrLijDR" version="22.1.18" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-16T13:16:39.689Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36" etag="ifDpgIXn9Ugm3EVYmNnl" version="22.1.18" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="2317" dy="817" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
         <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-51" value="点云体素化，每个栅格只使用一个点&lt;br&gt;subSampleFrame()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2170" y="1370" width="120" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="zkfFHV4jXpPFQw0GAbJ--0" value="lidarodom" style="swimlane;fontStyle=2;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeLast=0;collapsible=1;marginBottom=0;rounded=0;shadow=0;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="100" y="120" width="400" height="1228" as="geometry">
             <mxRectangle x="220" y="120" width="160" height="26" as="alternateBounds" />
@@ -54,7 +57,7 @@
         <mxCell id="-YqU8lc6YnFRLqplRP0o-103" value="- current_state: state* 用于记录当前状态量 " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="402" width="400" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="-YqU8lc6YnFRLqplRP0o-104" value="- all_state_frame: 用于保存加载的参数 " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
+        <mxCell id="-YqU8lc6YnFRLqplRP0o-104" value="std- all_state_frame: std::vector&lt;state *&gt; 用于保存所有帧状态 " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
           <mxGeometry y="428" width="400" height="26" as="geometry" />
         </mxCell>
         <mxCell id="-YqU8lc6YnFRLqplRP0o-105" value="- pub_cloud_to_ros: 用于传递的发布点云的函数对象 " style="text;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rounded=0;shadow=0;html=0;" parent="zkfFHV4jXpPFQw0GAbJ--0" vertex="1">
@@ -288,30 +291,30 @@
         <mxCell id="-YqU8lc6YnFRLqplRP0o-83" value="&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;void &lt;span style=&quot;color:#b5b6e3;&quot;&gt;lidarodom&lt;/span&gt;::&lt;span style=&quot;color:#ffc66d;&quot;&gt;run&lt;/span&gt;()&lt;/pre&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1080" y="360" width="230" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-0" target="-UBt_XiDJcNhWr5Cwaw3-2">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-0" target="-UBt_XiDJcNhWr5Cwaw3-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-0" target="-UBt_XiDJcNhWr5Cwaw3-5">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-0" target="-UBt_XiDJcNhWr5Cwaw3-5" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-0" value="时间同步观测量是否为空" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-0" value="时间同步观测量是否为空" style="rhombus;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1100" y="480" width="190" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-1" value="加锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-1" value="加锁" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1191" y="428" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-2">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1195" y="760" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-2" value="该线程被唤醒，解锁" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-2" value="该线程被唤醒，解锁" style="whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1135" y="620" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-4" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-4" value="否" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1190" y="578" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-5" target="-UBt_XiDJcNhWr5Cwaw3-0">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-5" target="-UBt_XiDJcNhWr5Cwaw3-0" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="1430" y="420" as="targetPoint" />
             <Array as="points">
@@ -320,23 +323,141 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-5" value="该线程等待" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-5" value="该线程等待" style="whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1370" y="500" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-7" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-7" value="是" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1320" y="498" width="40" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-13" value="遍历观测量队列，对每一帧同步观测量处理" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-13" value="遍历观测量队列，对每一帧同步观测量处理" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="1091" y="700" width="250" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-14" target="-UBt_XiDJcNhWr5Cwaw3-15">
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-14" value="&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;ProcessMeasurements()&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1106" y="750" width="204" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-15" target="bE53pq3YOOZ8l5XibpKr-17">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-14" value="&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;ProcessMeasurements()&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1106" y="750" width="220" height="70" as="geometry" />
+        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-15" value="状态初始化&lt;br&gt;stateInitialization()" style="whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1400" y="755" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="-UBt_XiDJcNhWr5Cwaw3-15" value="状态初始化&lt;br&gt;stateInitialization()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
-          <mxGeometry x="1456" y="755" width="120" height="60" as="geometry" />
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-0" value="&lt;pre style=&quot;background-color: rgb(43, 43, 43); color: rgb(169, 183, 198); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 10px;&quot;&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;class &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;state&lt;br&gt;&lt;/span&gt;{&lt;br&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;public&lt;/span&gt;:&lt;br&gt;     &lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Quaterniond &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;rotation&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;  &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;旋转&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;translation&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;  &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;平移&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;velocity&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;     &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;速度&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;ba&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;           &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;加速度偏置&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;bg&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;           &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;陀螺仪偏置&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Quaterniond &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;rotation_begin&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;  &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;起始旋转量&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;translation_begin&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;  &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;起始平移量&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;velocity_begin&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;     &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;起始速度&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;ba_begin&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;           &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;起始加速度偏置&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;bg_begin&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;           &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;起始陀螺仪偏置&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;state&lt;/span&gt;(&lt;span style=&quot;color:#cc7832;&quot;&gt;const &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Quaterniond &lt;/span&gt;&amp;amp;rotation_&lt;span style=&quot;color:#cc7832;&quot;&gt;, const &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&amp;amp;translation_&lt;span style=&quot;color:#cc7832;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;           const &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&amp;amp;velocity_&lt;span style=&quot;color:#cc7832;&quot;&gt;, const &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&amp;amp;ba_&lt;span style=&quot;color:#cc7832;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;           const &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;Eigen&lt;/span&gt;::&lt;span style=&quot;color:#b9bcd1;&quot;&gt;Vector3d &lt;/span&gt;&amp;amp;bg_)&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;构造函数&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;state&lt;/span&gt;(&lt;span style=&quot;color:#cc7832;&quot;&gt;const &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;state &lt;/span&gt;*state_temp&lt;span style=&quot;color:#cc7832;&quot;&gt;, bool &lt;/span&gt;copy = &lt;span style=&quot;color:#cc7832;&quot;&gt;false&lt;/span&gt;)&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;拷贝构造函数&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;void &lt;/span&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;release&lt;/span&gt;()&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;}&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="-510" y="570" width="510" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-YqU8lc6YnFRLqplRP0o-103" target="bE53pq3YOOZ8l5XibpKr-0">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-11" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-14" target="-UBt_XiDJcNhWr5Cwaw3-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1590" y="860" as="sourcePoint" />
+            <mxPoint x="1640" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-13" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="-UBt_XiDJcNhWr5Cwaw3-15" target="bE53pq3YOOZ8l5XibpKr-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1590" y="820" as="sourcePoint" />
+            <mxPoint x="1640" y="785" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-16" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-14" target="bE53pq3YOOZ8l5XibpKr-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-14" value="前两帧设置起始旋转、平移量" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1640" y="755" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-15" value="1. 后面的帧使用上一帧的rotation、translation更新current_state的rotation_begin、translation_begin&lt;br&gt;2.&amp;nbsp;以上一帧的旋转量预测当前帧的旋转rotation、平移量translation" style="whiteSpace=wrap;html=1;align=left;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1550" y="860" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-38" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-17" target="bE53pq3YOOZ8l5XibpKr-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-17" value="处理lidar帧&lt;br&gt;buildFrame()，返回cloudFrame" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1400" y="960" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-19" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-17" target="bE53pq3YOOZ8l5XibpKr-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1590" y="830" as="sourcePoint" />
+            <mxPoint x="1640" y="990" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-20" target="bE53pq3YOOZ8l5XibpKr-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-20" value="如果是前两帧，点的alpha_time = 1.0; 后面的帧如果运动补偿为匀速模型，进行去畸变distortFrame()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1640" y="960" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-25" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-22" target="bE53pq3YOOZ8l5XibpKr-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-22" value="&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;distortFrame()&lt;/span&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2112.08" y="960" width="127" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-23" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-20" target="bE53pq3YOOZ8l5XibpKr-22">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1960" y="1090" as="sourcePoint" />
+            <mxPoint x="2010" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-24" value="&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;1. 旋转、平移量根据点时间戳插值&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;2. 将lidar系下的当前帧点转到imu系&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;3. 将imu系当前帧点转到imu系下原点(起始帧)&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;4. 转到imu系下的当前帧&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;5. 最后转到lidar系的当前帧&lt;/span&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2050" y="1030" width="251.16" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-27" value="根据运动模型将帧中间的点转到起始点坐标系下&lt;br&gt;transformPoint()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1706.25" y="1058" width="157.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-29" value="遍历当前帧每个点" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1730" y="1028" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-35" value="&lt;pre style=&quot;background-color: rgb(43, 43, 43); color: rgb(169, 183, 198); font-family: &amp;quot;JetBrains Mono&amp;quot;, monospace; font-size: 7px;&quot;&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;class &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;cloudFrame&lt;br&gt;&lt;/span&gt;{&lt;br&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;public&lt;/span&gt;:&lt;br&gt;     &lt;span style=&quot;color:#cc7832;&quot;&gt;double &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;time_frame_begin&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//  lidar&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;帧第一个点的时间戳&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;double &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;time_frame_end&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;   &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//  lidar&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;帧最后一个点的时间戳&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;int &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;frame_id&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;// &lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;帧索引&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;state &lt;/span&gt;*&lt;span style=&quot;color:#9373a5;&quot;&gt;p_state&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;当前帧状态量&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;font-family:&#39;DejaVu Sans Mono&#39;,monospace;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;std&lt;/span&gt;::&lt;span style=&quot;color:#b5b6e3;&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;point3D&lt;/span&gt;&amp;gt; &lt;span style=&quot;color:#9373a5;&quot;&gt;point_surf&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//  global frame&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;std&lt;/span&gt;::&lt;span style=&quot;color:#b5b6e3;&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;point3D&lt;/span&gt;&amp;gt; &lt;span style=&quot;color:#9373a5;&quot;&gt;const_surf&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;; &lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;//  lidar frame&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#808080;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;std&lt;/span&gt;::&lt;span style=&quot;color:#b5b6e3;&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;point3D&lt;/span&gt;&amp;gt; &lt;span style=&quot;color:#9373a5;&quot;&gt;surf_keypoints&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;     double &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;dt_offset&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;     bool &lt;/span&gt;&lt;span style=&quot;color:#9373a5;&quot;&gt;success&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;cloudFrame&lt;/span&gt;(&lt;span style=&quot;color:#b5b6e3;&quot;&gt;std&lt;/span&gt;::&lt;span style=&quot;color:#b5b6e3;&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;point3D&lt;/span&gt;&amp;gt; &amp;amp;point_surf_&lt;span style=&quot;color:#cc7832;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;std&lt;/span&gt;::&lt;span style=&quot;color:#b5b6e3;&quot;&gt;vector&lt;/span&gt;&amp;lt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;point3D&lt;/span&gt;&amp;gt; &amp;amp;const_surf_&lt;span style=&quot;color:#cc7832;&quot;&gt;,&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;                &lt;/span&gt;&lt;span style=&quot;color:#b5b6e3;&quot;&gt;state &lt;/span&gt;*p_state_)&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;     &lt;/span&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;cloudFrame&lt;/span&gt;(&lt;span style=&quot;color:#b5b6e3;&quot;&gt;cloudFrame &lt;/span&gt;*p_cloud_frame)&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;color:#cc7832;&quot;&gt;     void &lt;/span&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;release&lt;/span&gt;()&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;br&gt;&lt;/span&gt;}&lt;span style=&quot;color:#cc7832;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1610" y="410" width="490" height="410" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-36" value="" style="curved=1;endArrow=classic;html=1;rounded=0;entryX=-0.001;entryY=0.375;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" target="bE53pq3YOOZ8l5XibpKr-35">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1400" y="990" as="sourcePoint" />
+            <mxPoint x="1450" y="940" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1310" y="830" />
+              <mxPoint x="1440" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-37" value="位姿估计&lt;br&gt;poseEstimation()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1400" y="1169" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-39" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-37" target="bE53pq3YOOZ8l5XibpKr-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1560" y="1300" as="sourcePoint" />
+            <mxPoint x="1610" y="1250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-40" value="当帧数&amp;gt;1，优化&lt;br&gt;optimize()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1640" y="1169" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-43" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-40" target="bE53pq3YOOZ8l5XibpKr-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1813.75" y="1224" as="sourcePoint" />
+            <mxPoint x="1980" y="1199" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-47" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-45" target="bE53pq3YOOZ8l5XibpKr-46">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-45" value="&lt;pre style=&quot;background-color:#2b2b2b;color:#a9b7c6;font-family:&#39;JetBrains Mono&#39;,monospace;font-size:12.0pt;&quot;&gt;&lt;span style=&quot;color:#ffc66d;&quot;&gt;optimize()&lt;/span&gt;&lt;/pre&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1950" y="1166" width="100" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-49" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-46" target="bE53pq3YOOZ8l5XibpKr-48">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-46" value="前一帧状态赋值&lt;br&gt;previous_state" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1940" y="1260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-48" value="对全局点云下采样&lt;br&gt;gridSamping()" style="whiteSpace=wrap;html=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="1940" y="1370" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="bE53pq3YOOZ8l5XibpKr-50" value="" style="endArrow=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bE53pq3YOOZ8l5XibpKr-48" target="bE53pq3YOOZ8l5XibpKr-51">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1870" y="1300" as="sourcePoint" />
+            <mxPoint x="1920" y="1250" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
